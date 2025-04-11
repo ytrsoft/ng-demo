@@ -6,6 +6,7 @@ import { provideHttpClient } from '@angular/common/http'
 import { CapitalizePipe } from './capitalize.pipe'
 import { DataChartComponent } from './data-chart/data-chart.component'
 import { HoverDirective } from './hover.directive'
+import { MyInputComponent } from './my-input/my-input.component'
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { HoverDirective } from './hover.directive'
     RouterModule,
     HoverDirective,
     CapitalizePipe,
-    DataChartComponent
+    DataChartComponent,
+    MyInputComponent
   ],
   exports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { HoverDirective } from './hover.directive'
     ReactiveFormsModule,
     HoverDirective,
     CapitalizePipe,
-    DataChartComponent
+    DataChartComponent,
+    MyInputComponent
   ],
   providers: [provideHttpClient()]
 })

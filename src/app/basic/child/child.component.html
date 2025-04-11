@@ -13,7 +13,8 @@
 <ng-template #elseTemplate>
   <ng-container *ngTemplateOutlet="templateRef"></ng-container>
 </ng-template>
-
+<app-my-input [(value)]="val"></app-my-input>
+<p>当前输入的值是：{{ val }}</p>
 <div class="card-set">
   <app-card>
     <div header>

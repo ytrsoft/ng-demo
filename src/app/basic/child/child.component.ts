@@ -17,6 +17,7 @@ export class ChildComponent implements OnInit, OnDestroy, OnChanges  {
   @Input() value!: number
   @Output() revc = new EventEmitter<number>()
 
+  val = ''
 
   @ContentChild('body') body!: ElementRef
 
