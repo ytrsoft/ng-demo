@@ -1,6 +1,7 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { SharedModule } from '../shared.module'
 import { ChildComponent } from './child/child.component'
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-basic',
@@ -11,10 +12,16 @@ import { ChildComponent } from './child/child.component'
   templateUrl: './basic.component.html',
   styleUrls: ['./basic.component.scss']
 })
-export class BasicComponent {
+export class BasicComponent implements OnInit {
 
   public total = 0
   public fontColor = '#000'
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    console.log('snapshot data', this.route.snapshot.data)
+  }
 
   onClick() {
     this.total++

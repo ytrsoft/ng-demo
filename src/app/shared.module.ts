@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router'
 import { provideHttpClient } from '@angular/common/http'
 import { CapitalizePipe } from './capitalize.pipe'
+import { DataChartComponent } from './data-chart/data-chart.component'
 
 @NgModule({
   imports: [
@@ -11,14 +12,15 @@ import { CapitalizePipe } from './capitalize.pipe'
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    CapitalizePipe
+    CapitalizePipe,
+    DataChartComponent
   ],
-  declarations: [],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    CapitalizePipe
+    CapitalizePipe,
+    DataChartComponent
   ],
   providers: [provideHttpClient()]
 })
