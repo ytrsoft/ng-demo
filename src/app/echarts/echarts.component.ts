@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { SharedModule } from '../shared.module';
 
 @Component({
   selector: 'app-echarts',
-  imports: [],
+  imports: [
+    SharedModule
+  ],
   templateUrl: './echarts.component.html',
   styleUrl: './echarts.component.scss'
 })

@@ -15,9 +15,7 @@ import { provideHttpClient } from '@angular/common/http';
     exports: [
       CommonModule,
       FormsModule,
-      ReactiveFormsModule,
-      RouterModule,
-      RouterOutlet
+      ReactiveFormsModule
     ],
     providers: [provideHttpClient()]
 })
