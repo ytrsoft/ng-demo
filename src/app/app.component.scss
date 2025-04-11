@@ -1,0 +1,28 @@
+.navbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border-bottom: 1px solid #333333;
+  .logo {
+    flex: none;
+    color: #fff;
+  }
+  .nav-links {
+    flex: 1;
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  li {
+    width: 75px;
+    text-align: center;
+    a {
+      color: #858585;
+      text-decoration: none;
+    }
+  }
+}
