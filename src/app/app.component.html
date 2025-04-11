@@ -3,7 +3,7 @@
     <h1>Angular</h1>
   </div>
   <ul class="nav-links">
-    <li *ngFor="let link of links">
+    <li *ngFor="let link of links; trackBy: trackById">
       <a [routerLink]="link.url" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         {{ link.label }}
       </a>

@@ -13,10 +13,13 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  public links: any[] = [
-    { label: '基础', url: '/' },
-    { label: '表单', url: '/form' },
-    { label: 'RXJS', url: '/rxjs' },
-    { label: 'Echarts', url: '/echarts' }
+  links: any[] = [
+    { id: 0, label: '基础', url: '/' },
+    { id: 1, label: '表单', url: '/form' },
+    { id: 2, label: 'RXJS', url: '/rxjs' },
+    { id: 3, label: 'Echarts', url: '/echarts' }
   ]
+  trackById(index: number, item: any): number {
+    return item.id
+  }
 }
