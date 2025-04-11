@@ -5,4 +5,7 @@
   <p>
     <span>{{ author | capitalize }}</span>
   </p>
+  <p>
+    <app-child [value]="total" (revc)="onMessage($event)" />
+  </p>
 </div>
