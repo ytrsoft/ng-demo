@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { AfterContentInit, AfterViewInit, Component, ContentChild, ContentChildren, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core'
 import { SharedModule } from '../shared.module'
 import { ChildComponent } from './child/child.component'
 import { ActivatedRoute } from '@angular/router'
@@ -12,15 +12,25 @@ import { ActivatedRoute } from '@angular/router'
   templateUrl: './basic.component.html',
   styleUrls: ['./basic.component.scss']
 })
-export class BasicComponent implements OnInit {
+export class BasicComponent implements OnInit, AfterViewInit {
 
   public total = 0
   public fontColor = '#000'
+
+  @ViewChild(ChildComponent) child!: ChildComponent;
+  // @ViewChildren(ChildComponent) children!: QueryList<ChildComponent>
+
+  @ViewChild('myInput') myInput!: ElementRef
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     console.log('snapshot data', this.route.snapshot.data)
+  }
+
+  ngAfterViewInit(): void {
+    console.log('@ViewChild', this.child)
+    console.log('@ViewChild', this.myInput.nativeElement)
   }
 
   onClick2(value: any): void {

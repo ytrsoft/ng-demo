@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router'
 import { provideHttpClient } from '@angular/common/http'
 import { CapitalizePipe } from './capitalize.pipe'
 import { DataChartComponent } from './data-chart/data-chart.component'
+import { HoverDirective } from './hover.directive'
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { DataChartComponent } from './data-chart/data-chart.component'
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    HoverDirective,
     CapitalizePipe,
     DataChartComponent
   ],
@@ -19,6 +21,7 @@ import { DataChartComponent } from './data-chart/data-chart.component'
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    HoverDirective,
     CapitalizePipe,
     DataChartComponent
   ],

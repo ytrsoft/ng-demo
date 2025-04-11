@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core'
+import { AfterContentInit, Component, ContentChild, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core'
 import { SharedModule } from '../../shared.module'
 import { interval, Subscription } from 'rxjs'
 import { CardComponent } from '../../card/card.component'
@@ -12,10 +12,13 @@ import { CardComponent } from '../../card/card.component'
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.scss']
 })
-export class ChildComponent implements OnInit, OnDestroy, OnChanges {
+export class ChildComponent implements OnInit, OnDestroy, OnChanges  {
 
   @Input() value!: number
   @Output() revc = new EventEmitter<number>()
+
+
+  @ContentChild('body') body!: ElementRef
 
   private sub!: Subscription
 

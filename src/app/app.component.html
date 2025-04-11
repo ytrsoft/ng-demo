@@ -1,6 +1,6 @@
 <nav class="navbar" aria-label="Main navigation">
   <div class="logo">
-    <h1>{{name|capitalize}}</h1>
+    <h1 ngHover [hoverColor]="'lightblue'">{{name|capitalize}}</h1>
   </div>
   <ul class="nav-links">
     <li *ngFor="let link of links$ | async; trackBy: trackById">
