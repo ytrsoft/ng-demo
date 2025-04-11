@@ -18,9 +18,7 @@ export class DataService {
 
   getRoutes(): Observable<any> {
 
-    const delay = Math.floor(Math.random() * 3000) + 1000
-
-    return timer(delay).pipe(
+    return timer(500).pipe(
       map(() => {
         return this.links
       })

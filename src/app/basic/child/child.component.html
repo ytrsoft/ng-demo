@@ -1,1 +1,6 @@
-<p>父组件的值：{{value}}</p>
+<div *ngIf="value > 0" [ngClass]="{ 'more': isMore }">父组件的值：{{value}}</div>
+<div [ngSwitch]="value">
+  <div *ngSwitchCase="0">A</div>
+  <div *ngSwitchCase="1">B</div>
+  <div *ngSwitchDefault>S</div>
+</div>
