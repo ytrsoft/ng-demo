@@ -1,9 +1,6 @@
 <div class="container">
   <p>
-    <button (click)="onClick()">已经点击{{total}}次</button>
-  </p>
-  <p>
-    <span>{{ author | capitalize }}</span>
+    <button [style.color]="fontColor" (click)="onClick()">已经点击{{total}}次</button>
   </p>
   <p>
     <app-child [value]="total" (revc)="onMessage($event)" />
