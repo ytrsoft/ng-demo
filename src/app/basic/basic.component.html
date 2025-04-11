@@ -1,6 +1,8 @@
 <div class="container">
-  <p>
+  <p class="flex">
+    <input #myInput/>
     <button [style.color]="fontColor" (click)="onClick()">已经点击{{total}}次</button>
+    <button (click)="onClick2(myInput.value)">设置</button>
   </p>
   <p>
     <app-child [value]="total" (revc)="onMessage($event)" />

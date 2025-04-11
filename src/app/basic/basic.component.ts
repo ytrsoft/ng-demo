@@ -23,7 +23,13 @@ export class BasicComponent implements OnInit {
     console.log('snapshot data', this.route.snapshot.data)
   }
 
-  onClick() {
+  onClick2(value: any): void {
+    if (!isNaN(value)) {
+      this.total = Number(value)
+    }
+  }
+
+  onClick(): void {
     this.total++
     if (this.total > 3) {
       this.fontColor = '#FF4D4F'

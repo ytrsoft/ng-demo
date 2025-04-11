@@ -1,11 +1,13 @@
 import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core'
 import { SharedModule } from '../../shared.module'
 import { interval, Subscription } from 'rxjs'
+import { CardComponent } from '../../card/card.component'
 
 @Component({
   selector: 'app-child',
   imports: [
-    SharedModule
+    SharedModule,
+    CardComponent
   ],
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.scss']
