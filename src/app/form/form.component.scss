@@ -1,0 +1,29 @@
+.forms {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+form>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+button,
+input {
+  height: 48px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  width: 250px;
+  margin-bottom: 8px;
+}
+
+label {
+  color: #fff;
+}
+
+small {
+  color: #FF4D4F;
+}

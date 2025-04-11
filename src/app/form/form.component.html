@@ -1,1 +1,23 @@
-<p>form works!</p>
+<div class="forms">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">用户名</label>
+      <input id="username" formControlName="username" type="text" />
+      <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid">
+        <small *ngIf="loginForm.get('username')?.hasError('required')">用户名是必填项</small>
+        <small *ngIf="loginForm.get('username')?.hasError('minlength')">用户名长度至少为 3 个字符</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="password">密码</label>
+      <input id="password" formControlName="password" type="password" />
+      <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+        <small *ngIf="loginForm.get('password')?.hasError('required')">密码是必填项</small>
+        <small *ngIf="loginForm.get('password')?.hasError('minlength')">密码长度至少为 6 个字符</small>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">登录</button>
+  </form>
+</div>
