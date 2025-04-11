@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { inject, Injectable } from '@angular/core'
 import { Observable, timer } from 'rxjs'
 import { map } from 'rxjs/operators'
 
@@ -6,6 +7,8 @@ import { map } from 'rxjs/operators'
   providedIn: 'root'
 })
 export class DataService {
+
+  private http = inject(HttpClient)
 
   links = [
     { id: 0, label: '基础', url: '/' },
@@ -16,8 +19,11 @@ export class DataService {
     { id: 3, label: 'Echarts', url: '/echarts' }
   ]
 
-  getRoutes(): Observable<any> {
+  getToken(): Observable<string> {
+    return this.http.post<string>('/getToken', {})
+  }
 
+  getRoutes(): Observable<any> {
     return timer(500).pipe(
       map(() => {
         return this.links

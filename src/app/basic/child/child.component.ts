@@ -26,9 +26,9 @@ export class ChildComponent implements OnInit, OnDestroy, OnChanges  {
   isMore = false
 
   ngOnInit() {
-    this.sub = interval(1000).subscribe((val) => {
-     this.revc.emit(val)
-    })
+    // this.sub = interval(1000).subscribe((val) => {
+    //  this.revc.emit(val)
+    // })
   }
 
   ngOnChanges(changes: SimpleChanges): void {

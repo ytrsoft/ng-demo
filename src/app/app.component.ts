@@ -19,6 +19,9 @@ export class AppComponent {
 
   constructor(private ps: DataService) {
     this.links$ = ps.getRoutes()
+    ps.getToken().subscribe((token: string) => {
+      console.log('token', token)
+    })
   }
 
   trackById(index: number, item: any): number {

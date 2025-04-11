@@ -10,7 +10,7 @@ export class MyInputComponent {
   @Input() value: string = ''
   @Output() valueChange = new EventEmitter<string>()
 
-  onInput(ev: InputEvent): void {
+  onInput(ev: any): void {
     const inputElement = ev.target as HTMLInputElement
     this.value = inputElement.value
     this.valueChange.emit(this.value)
