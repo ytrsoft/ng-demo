@@ -1,13 +1,11 @@
-import { Component, OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, SimpleChanges } from '@angular/core'
+import { Component } from '@angular/core'
 import { SharedModule } from '../shared.module'
-import { CapitalizePipe } from '../capitalize.pipe'
 import { ChildComponent } from './child/child.component'
 
 @Component({
   selector: 'app-basic',
   imports: [
     SharedModule,
-    CapitalizePipe,
     ChildComponent
   ],
   templateUrl: './basic.component.html',

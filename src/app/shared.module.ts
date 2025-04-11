@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http';
-import { CapitalizePipe } from './capitalize.pipe'; // 确保文件路径正确
+import { CommonModule } from '@angular/common'
+import { NgModule } from '@angular/core'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router'
+import { provideHttpClient } from '@angular/common/http'
+import { CapitalizePipe } from './capitalize.pipe'
 
 @NgModule({
   imports: [
@@ -11,11 +11,14 @@ import { CapitalizePipe } from './capitalize.pipe'; // 确保文件路径正确
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    CapitalizePipe
   ],
+  declarations: [],
   exports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CapitalizePipe
   ],
   providers: [provideHttpClient()]
 })

@@ -1,6 +1,6 @@
 <nav class="navbar" aria-label="Main navigation">
   <div class="logo">
-    <h1>Angular</h1>
+    <h1>{{name|capitalize}}</h1>
   </div>
   <ul class="nav-links">
     <li *ngFor="let link of links; trackBy: trackById">

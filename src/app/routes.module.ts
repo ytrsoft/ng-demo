@@ -14,4 +14,4 @@ import { RouterModule, RouterOutlet } from '@angular/router'
     RouterOutlet
   ]
 })
-export class AppModule { }
+export class RoutesModule { }

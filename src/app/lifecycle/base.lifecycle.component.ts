@@ -1,22 +1,18 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnChanges, OnDestroy, OnInit } from '@angular/core'
-import { SharedModule } from '../../shared.module'
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core'
 
 @Component({
-  selector: 'app-lifecycle-child',
-  imports: [
-    SharedModule
-  ],
-  templateUrl: './lifecycle-child.component.html',
-  styleUrl: './lifecycle-child.component.scss'
+  template: ``
 })
-export class LifecycleChildComponent implements OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export abstract class BaseLifecycleComponent implements OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+
+  abstract getTag(): string
 
   constructor() {
     this.log('constructor')
   }
 
   private log(method: string): void {
-    console.log('子组件', `===${method}===`)
+    console.log(this.getTag(), `===${method}===`)
   }
 
   ngOnChanges(): void {
@@ -48,4 +44,3 @@ export class LifecycleChildComponent implements OnInit, OnChanges, AfterContentI
   }
 
 }
-
