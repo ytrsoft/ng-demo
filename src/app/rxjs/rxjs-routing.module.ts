@@ -6,6 +6,11 @@ import { AsyncSubjectComponent } from './async-subject/async-subject.component'
 import { CombinationComponent } from './combination/combination.component'
 import { ConditionalComponent } from './conditional/conditional.component'
 import { CreationComponent } from './creation/creation.component'
+import { ErrorHandlingComponent } from './error-handling/error-handling.component'
+import { MulticastingComponent } from './multicasting/multicasting.component'
+import { FilteringComponent } from './filtering/filtering.component'
+import { TransformationComponent } from './transformation/transformation.component'
+import { UtilityComponent } from './utility/utility.component'
 
 export const RxjsRoutingModule: Routes = [
   {
@@ -35,6 +40,26 @@ export const RxjsRoutingModule: Routes = [
   {
     path: 'creation',
     component: CreationComponent,
+  },
+  {
+    path: 'error-handling',
+    component: ErrorHandlingComponent,
+  },
+  {
+    path: 'multicasting',
+    component: MulticastingComponent,
+  },
+  {
+    path: 'filtering',
+    component: FilteringComponent,
+  },
+  {
+    path: 'transformation',
+    component: TransformationComponent,
+  },
+  {
+    path: 'utility',
+    component: UtilityComponent,
   },
   { path: '**', redirectTo: '' }
 ]
