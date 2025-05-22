@@ -3,7 +3,7 @@ import { SharedModule } from '../../shared.module'
 import { AsyncSubject } from 'rxjs'
 
 @Component({
-  selector: 'app-subject',
+  selector: 'app-async',
   imports: [
     SharedModule
   ],
