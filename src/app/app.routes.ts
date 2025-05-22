@@ -22,7 +22,11 @@ export const routes: Routes = [
     loadChildren: () => import('./child-routes-routing.module').then((m) => m.ChildRoutesRoutingModule),
   },
   { path: 'form', component: FormComponent },
-  { path: 'rxjs', component: RxjsComponent },
+  {
+    path: 'rxjs',
+    component: RxjsComponent,
+    loadChildren: () => import('./rxjs/rxjs-routing.module').then((m) => m.RxjsRoutingModule),
+  },
   { path: 'echarts', component: EchartsComponent },
   { path: '**', redirectTo: '' }
 ]
