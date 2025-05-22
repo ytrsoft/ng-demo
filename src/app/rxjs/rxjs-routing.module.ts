@@ -4,6 +4,7 @@ import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.co
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component'
 import { AsyncSubjectComponent } from './async-subject/async-subject.component'
 import { CombinationComponent } from './combination/combination.component'
+import { ConditionalComponent } from './conditional/conditional.component'
 
 export const RxjsRoutingModule: Routes = [
   {
@@ -25,6 +26,10 @@ export const RxjsRoutingModule: Routes = [
   {
     path: 'combination',
     component: CombinationComponent,
+  },
+  {
+    path: 'conditional',
+    component: ConditionalComponent,
   },
   { path: '**', redirectTo: '' }
 ]
