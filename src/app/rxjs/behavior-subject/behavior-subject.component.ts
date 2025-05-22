@@ -1,21 +1,21 @@
 import { Component } from '@angular/core'
 import { SharedModule } from '../../shared.module'
-import { Subject } from 'rxjs'
+import { BehaviorSubject } from 'rxjs'
 
 @Component({
-  selector: 'app-subject',
+  selector: 'app-behavior',
   imports: [
     SharedModule
   ],
-  templateUrl: './subject.component.html',
-  styleUrl: './subject.component.scss'
+  templateUrl: './behavior-subject.component.html',
+  styleUrl: './behavior-subject.component.scss'
 })
 /**
- * 可以接收订阅后的所有发射值
+ * 推送最新值给所有已订阅者
  */
-export class SubjectComponent {
+export class BehaviorSubjectComponent {
 
-  subject = new Subject<number>()
+  subject = new BehaviorSubject<number>(0)
 
   constructor() {
     this.subject.subscribe((value) => {

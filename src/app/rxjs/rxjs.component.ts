@@ -14,8 +14,6 @@ import { RoutesModule } from '../routes.module'
 })
 export class RxjsComponent implements OnInit {
 
-  ngOnInit() {
-    console.log('hello rxjs')
-  }
+  ngOnInit() {}
 
 }
